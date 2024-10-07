@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 class Task(models.Model):
     options = {
@@ -18,3 +18,11 @@ class Task(models.Model):
     priority_level = models.CharField(max_length=10, choices=options)
     status = models.CharField(max_length=10, choices=statu)
 
+
+class Users(models.Model):
+    username  = models.ForeignKey(User, on_delete=models.CASCADE)
+    email = models.CharField(max_length=50)
+    password = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.username
