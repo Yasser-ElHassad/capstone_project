@@ -3,7 +3,7 @@ from .views import TaskListCreateAPIView, TaskViewSet
 from rest_framework.routers import DefaultRouter
 
 route = DefaultRouter()
-route.register(r'my-models', TaskViewSet)
+route.register(r'my-models', TaskViewSet, basename='tasks')
 
 
 urlpatterns = [
