@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'yasser17.pythonanywhere.com',
     'localhost',
+    '127.0.0.1',
     ]
 
 
